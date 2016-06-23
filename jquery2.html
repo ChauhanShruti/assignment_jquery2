@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jquery2</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			
+			$("p").click(function(){
+				$("p:last").append("<p>This is a click Event</p>");
+			});
+			$("p").dblclick(function(){
+				$("p:last").append("<p>This is a double-click Event</p>");
+			});
+			
+		});
+	</script>
+
+	<script>
+		$(document).ready(function(){
+			$("#field1").blur(function(){
+				alert("you have left field 1");
+			});
+		});
+	</script>
+
+	<script>
+		$(document).ready(function(){
+			$("input").change(function(){
+				
+				$("#f1").append("<p>input field is changed.</p>");
+			});
+		});
+	</script>
+</head>
+<body>
+
+<p>Click me !</p>
+
+
+<br><br><br>
+
+<form>
+<input id="field1" type="text" value="Field 1">
+<input id="field2" type="text" value="Field 2">
+</form>
+
+<br><br><br>
+
+<form name='demo_form' id="f1">
+First name: <input type="text" name="fname"><br>
+Last name: <input type="text" name="lname"><br>
+<input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
